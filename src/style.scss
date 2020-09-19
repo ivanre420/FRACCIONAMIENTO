@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/*
+  VARIABLES
+*/
+$easeOutExpo:           cubic-bezier(0.19, 1, 0.22, 1);
+$c-body-bg:             #7AA226;
+$c-map-purple:          #C768E8;
+$c-map-pink:            #AA0E76;
+$c-map-red:             #B83D54;
+$c-map-orange:          #f8a514;
+$c-map-yellow:          #EDE213;
+$c-map-teal:            #13a3aa;
+$c-map-baby-blue:       #BCF9F4;
+$header-font-family:    Oswald, sans-serif;
+$body-font-family:      "Source Sans Pro", sans-serif;
+
+/*
+  ANIMATIONS
+*/
+@keyframes trolley-path-move {
+  to {
+    stroke-dashoffset: 100%;
+  }
+}
+
+/*
+  GLOBAL STYLING
+*/
+body {
+  background: $c-body-bg;
+  color: #fff;
+  font-family: $body-font-family;
+}
+
+h1.title {
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1rem;
+  color: $c-map-pink;
+  a {
+    color: darken($c-map-pink,5%);
+    text-decoration: none;
+    &:hover { color: darken($c-map-pink,10%); }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h1.title {
+    font-size: 4rem;
+    letter-spacing: .2rem;
+  }
+}
+
+/*
+  SVG STYLING
+*/
+svg#map-w-legend {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  text {
+    text-rendering: geometricPrecision;
+    font-size: .35rem;
+    font-weight: 400;
+    &.text-label {
+      font-family: $header-font-family !important;
+      fill: #fff !important;
+      letter-spacing: .02rem;
+    }
+  }
+
+  .fills {
+    .fill-street-fest       { fill: $c-map-orange; }
+    .fill-club-hb           { fill: $c-map-teal; }
+  }
+  .dots                     { fill: $c-map-baby-blue; }
+  .streets {
+    .pedestrian-mall        { fill: $c-map-purple; }
+    .street-paths           { fill: #fff; }
+  }
+  .labels                   { fill: #fff;
+    text {
+      font-family: $header-font-family;
+      text-transform: uppercase;
+      letter-spacing: .025rem;
+      font-size: .4rem;
+      &.s2 {
+        font-size: .4rem;
+      }
+      &.s3 {
+        font-size: .35rem;
+      }
+    }
+  }
+  .chinatown-eats {
+    use {
+      &:nth-of-type(1) {
+        stroke: #fff;
+        fill: transparent;
+      }
+      &:nth-of-type(2) {
+        fill: $c-map-baby-blue;
+      }
+    }
+  }
+  .hb-ball {
+    text { fill: #fff; }
+    .hisam-block            { fill: #111; }
+    use                     { fill: #fff;
+    }
+  }
+  .stages {
+    .stage-block            { fill: $c-map-red; }
+    [data-label]            { fill: #fff; }
+  }
+  .trolley {
+    use                     { fill: $c-map-yellow; }
+    .trolley-path {
+      fill: transparent;
+                              stroke: $c-map-pink;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2px;
+
+      animation: trolley-path-move 30s linear infinite;
+      stroke-dasharray: 5;
+    }
+  }
+  .bolts, .squares {
+    text {
+      font-family: $body-font-family;
+    }
+  }
+  .bolt {
+    text                    { fill: darken($c-map-orange, 25%); }
+    use                     { fill: $c-map-orange; }
+  }
+  .square {
+    use                     { fill: $c-map-red; }
+    text                    { fill: #fff; }
+    &.purple use            { fill: $c-map-purple; }
+    &.orange use            { fill: $c-map-orange; }
+    &.blue use              { fill: $c-map-teal; }
+  }
+}
