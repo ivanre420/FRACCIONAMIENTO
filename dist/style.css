@@ -1,26 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
-/*
-  VARIABLES
-*/
-/*
-  ANIMATIONS
-*/
-@-webkit-keyframes trolley-path-move {
-  to {
-    stroke-dashoffset: 100%;
-  }
-}
+
+/*svg styles*/
+
+
+
+
 @keyframes trolley-path-move {
   to {
     stroke-dashoffset: 100%;
   }
 }
-/*
-  GLOBAL STYLING
-*/
-body {
-  background: #7AA226;
-  color: #fff;
+
+body{
+  background: #1e6d0f;
+  color: #fff(226, 11, 11);
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -29,25 +22,18 @@ h1.title {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .1rem;
-  color: #AA0E76;
-}
-h1.title a {
-  color: #920c66;
-  text-decoration: none;
-}
-h1.title a:hover {
-  color: #7b0a55;
+  color: #01010a;
 }
 
-@media screen and (min-width: 640px) {
+
+ 
   h1.title {
     font-size: 4rem;
     letter-spacing: .2rem;
   }
-}
-/*
-  SVG STYLING
-*/
+
+
+
 svg#map-w-legend {
   display: block;
   margin: 0 auto;
@@ -60,26 +46,23 @@ svg#map-w-legend text {
 }
 svg#map-w-legend text.text-label {
   font-family: Oswald, sans-serif !important;
-  fill: #fff !important;
+  fill: rgb(255, 255, 255) !important;
   letter-spacing: .02rem;
 }
 svg#map-w-legend .fills .fill-street-fest {
-  fill: #f8a514;
+  fill: #f6f8f6;
 }
-svg#map-w-legend .fills .fill-club-hb {
-  fill: #13a3aa;
-}
-svg#map-w-legend .dots {
-  fill: #BCF9F4;
-}
+
+
+
 svg#map-w-legend .streets .pedestrian-mall {
-  fill: #C768E8;
+  fill: rgb(253, 253, 253);
 }
 svg#map-w-legend .streets .street-paths {
-  fill: #fff;
+  fill: rgb(248, 245, 245);
 }
 svg#map-w-legend .labels {
-  fill: #fff;
+  fill: rgb(241, 232, 232);
 }
 svg#map-w-legend .labels text {
   font-family: Oswald, sans-serif;
@@ -87,24 +70,20 @@ svg#map-w-legend .labels text {
   letter-spacing: .025rem;
   font-size: .4rem;
 }
+
 svg#map-w-legend .labels text.s2 {
   font-size: .4rem;
 }
+
 svg#map-w-legend .labels text.s3 {
   font-size: .35rem;
 }
-svg#map-w-legend .chinatown-eats use:nth-of-type(1) {
-  stroke: #fff;
-  fill: transparent;
-}
-svg#map-w-legend .chinatown-eats use:nth-of-type(2) {
-  fill: #BCF9F4;
-}
+
 svg#map-w-legend .hb-ball text {
   fill: #fff;
 }
 svg#map-w-legend .hb-ball .hisam-block {
-  fill: #111;
+  fill: rgb(185, 14, 14);
 }
 svg#map-w-legend .hb-ball use {
   fill: #fff;
@@ -116,11 +95,11 @@ svg#map-w-legend .stages [data-label] {
   fill: #fff;
 }
 svg#map-w-legend .trolley use {
-  fill: #EDE213;
+  fill: #b6aa0a;
 }
 svg#map-w-legend .trolley .trolley-path {
   fill: transparent;
-  stroke: #AA0E76;
+  stroke: #00030cd2;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2px;
@@ -128,27 +107,23 @@ svg#map-w-legend .trolley .trolley-path {
           animation: trolley-path-move 30s linear infinite;
   stroke-dasharray: 5;
 }
-svg#map-w-legend .bolts text, svg#map-w-legend .squares text {
-  font-family: "Source Sans Pro", sans-serif;
-}
+
+
+
 svg#map-w-legend .bolt text {
-  fill: #885804;
+  fill: #ffffff;
 }
-svg#map-w-legend .bolt use {
-  fill: #f8a514;
-}
+
+
 svg#map-w-legend .square use {
   fill: #B83D54;
+  
 }
 svg#map-w-legend .square text {
-  fill: #fff;
+  fill: #ffffff;
 }
-svg#map-w-legend .square.purple use {
-  fill: #C768E8;
-}
+
 svg#map-w-legend .square.orange use {
-  fill: #f8a514;
+  fill: #ffffff;
 }
-svg#map-w-legend .square.blue use {
-  fill: #13a3aa;
-}
+
